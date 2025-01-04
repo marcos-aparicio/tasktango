@@ -6,3 +6,6 @@ justfile
 .env.testing
 .env.production
 .phpunit.result.cache
+
+/public/hot
+/public/storage

@@ -1,0 +1,15 @@
+vendor
+node_modules
+.gitattributes
+.gitignore
+.git
+.dockerignore
+.editorconfig
+.env.example
+.env
+database.sqlite
+docker-compose.yml
+Dockerfile
+Dockerfile.production
+justfile
+README.md

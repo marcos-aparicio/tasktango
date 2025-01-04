@@ -201,8 +201,6 @@ class CreateTaskForm extends Form
 
     /**
      * Assuming data is valid, create a task
-     *
-     * @return [TODO:type] [TODO:description]
      */
     public function createTask()
     {

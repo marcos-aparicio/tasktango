@@ -2,6 +2,7 @@ vendor/
 node_modules/
 justfile
 .env
+.secrets
 !.env.dusk.local.example
 .env.testing
 .env.production

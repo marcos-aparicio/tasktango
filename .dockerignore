@@ -1,5 +1,6 @@
 vendor
 node_modules
+.screenshots
 .gitattributes
 .gitignore
 .git

@@ -4,7 +4,6 @@ namespace Tests\Feature\Admin;
 
 use App\Models\Project;
 use App\Models\User;
-use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Volt\Volt;
 use Tests\TestCase;
@@ -164,7 +163,7 @@ class AdminTest extends TestCase
             'username' => 'super_admin_user',
         ]);
 
-        $this->seed(DatabaseSeeder::class);
+        $this->seed();
 
         $project = Project::first();
         $adminUsersComponent = Volt::test('admin.projects-table')

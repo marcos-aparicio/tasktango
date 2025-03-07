@@ -4,7 +4,6 @@ namespace Tests\Feature\Project;
 
 use App\Enums\TaskStatuses;
 use App\Models\Project;
-use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Volt\Volt;
 use Tests\TestCase;
@@ -15,7 +14,7 @@ class ProjectCompletionAndDeletionTest extends TestCase
 
     public function test_project_owner_can_delete_project()
     {
-        $this->seed(DatabaseSeeder::class);
+        $this->seed();
         $project = Project::first();
         $owner = $project->owner;
         $this->actingAs($owner);
@@ -28,7 +27,7 @@ class ProjectCompletionAndDeletionTest extends TestCase
 
     public function test_project_owner_can_complete_project()
     {
-        $this->seed(DatabaseSeeder::class);
+        $this->seed();
         $project = Project::first();
         $owner = $project->owner;
         $this->actingAs($owner);
@@ -40,7 +39,7 @@ class ProjectCompletionAndDeletionTest extends TestCase
 
     public function test_project_other_user_not_owner_cant_complete_project()
     {
-        $this->seed(DatabaseSeeder::class);
+        $this->seed();
         $project = Project::first();
         $otherUser = $project->users->where('id', '!=', $project->owner->id)->first();
         $this->actingAs($otherUser);
@@ -53,7 +52,7 @@ class ProjectCompletionAndDeletionTest extends TestCase
 
     public function test_project_other_user_not_owner_cant_delete_project()
     {
-        $this->seed(DatabaseSeeder::class);
+        $this->seed();
         $project = Project::first();
         $otherUser = $project->users->where('id', '!=', $project->owner->id)->first();
         $this->actingAs($otherUser);

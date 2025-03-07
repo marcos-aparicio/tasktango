@@ -38,7 +38,8 @@ class User extends Authenticatable implements MustVerifyEmail
             // creating user profile picture
             if (env('SUPER_ADMIN_USERNAME') !== null &&
                     $user->is_super_admin &&
-                    $user->username !== env('SUPER_ADMIN_USERNAME')) {
+                    $user->username !== env('SUPER_ADMIN_USERNAME') &&
+                    config('app.env') === 'production') {
                 $user->is_super_admin = false;
             }
         });

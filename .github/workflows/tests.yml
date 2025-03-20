@@ -11,6 +11,9 @@ jobs:
       DB_HOST: 127.0.0.1
       DB_PASSWORD: root
       MAIL_MAILER: log
+      SUPER_ADMIN_USERNAME: super_admin
+      SUPER_ADMIN_EMAIL: admin@admin.com
+      SUPER_ADMIN_PASSWORD: super-secure-password
     steps:
       - uses: actions/checkout@v4
       - name: Prepare The Environment

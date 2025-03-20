@@ -1,5 +1,4 @@
 name: Build and deploy Application
-
 on:
   workflow_run:
     workflows: [Tests]

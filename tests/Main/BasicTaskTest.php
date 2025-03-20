@@ -1,10 +1,9 @@
 <?php
 
-namespace Tests\Feature\Main;
+namespace Tests\Main;
 
 use App\Enums\TaskFrequencies;
 use App\Enums\TaskPriorities;
-use App\Enums\TaskStatuses;
 use App\Models\Label;
 use App\Models\Task;
 use App\Models\User;

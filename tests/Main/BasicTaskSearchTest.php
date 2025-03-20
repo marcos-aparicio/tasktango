@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Main;
+namespace Tests\Main;
 
 use App\Enums\TaskFrequencies;
 use App\Enums\TaskPriorities;

@@ -12,7 +12,7 @@
             <directory>tests/Feature</directory>
         </testsuite>
         <testsuite name="Main">
-            <directory>tests/Feature/Main</directory>
+            <directory>tests/Main</directory>
         </testsuite>
     </testsuites>
     <source>

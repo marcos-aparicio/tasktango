@@ -12,7 +12,11 @@
         $showAvatar = false;
 @endphp
 @if ($showAvatar && !$forceToShowIcon)
-    <x-avatar :image="$avatar" class="{{$attributes->get('avatar-class')}}" />
+    <x-avatar :image="$avatar"
+       {{ $attributes->except(['class', 'icon-class', 'avatar-class']) }}
+       class="{{$attributes->get('avatar-class')}}" />
 @else
-    <x-icon name="o-user" class="{{$attributes->get('icon-class')}}" />
+    <x-icon name="o-user"
+       {{ $attributes->except(['class', 'icon-class', 'avatar-class','name']) }}
+        class="{{$attributes->get('icon-class')}}" />
 @endif

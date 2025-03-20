@@ -16,7 +16,7 @@
             <x-list-item :item="$user" value="full_name" sub-value="email" no-separator no-hover
                 class="-mx-2 !-my-2 rounded">
                 <x-slot:avatar>
-                    <x-avatar-or-icon :user="$user" avatar-class="!w-10"/>
+                    <x-avatar-or-icon dusk="profile-avatar" :user="$user" avatar-class="!w-10"/>
                 </x-slot:avatar>
                 <x-slot:actions>
                     <x-theme-toggle dusk="theme-controller" darkTheme="synthwave" class="!w-6" />

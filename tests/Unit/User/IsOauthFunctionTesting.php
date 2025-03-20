@@ -10,7 +10,7 @@ class IsOauthFunctionTesting extends TestCase
     /**
      * A basic unit test example.
      */
-    public function test_to_fail_password_filled_with_provider_details_too (): void
+    public function test_to_fail_password_filled_with_provider_details_too(): void
     {
         $userOAuth = new User([
             'provider' => 'google',
@@ -21,6 +21,5 @@ class IsOauthFunctionTesting extends TestCase
 
         // Assert that the user is recognized as an OAuth account
         $this->assertFalse($userOAuth->isOauthAccount());
-    }
     }
 }

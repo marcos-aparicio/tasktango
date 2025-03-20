@@ -1,14 +1,18 @@
 name: Build and deploy Application
 
+# on:
+#   push:
+#     branches:
+#       - prod
+#   workflow_dispatch:
 on:
-  push:
-    branches:
-      - prod
-  workflow_dispatch:
+  workflow_run:
+    workflows: [Tests]
+    types: [completed]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'prod' }} # Run only if the first workflow succeeded and push was to prod
     steps:
       - uses: actions/checkout@v4
       - name: Setup PHP

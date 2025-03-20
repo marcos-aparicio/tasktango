@@ -93,4 +93,3 @@ Inbox View
 
 ![Search](.screenshots/search-functionality.png)
 Search Functionality
-

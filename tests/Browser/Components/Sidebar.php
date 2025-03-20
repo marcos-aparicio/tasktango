@@ -31,6 +31,7 @@ class Sidebar extends BaseComponent
     public function elements(): array
     {
         return [
+            '@profile-avatar' => '@profile-avatar',
             '@theme-controller' => '@theme-controller',
             '@next-7-days' => '@next-7-days',
             '@logout' => '@logout',

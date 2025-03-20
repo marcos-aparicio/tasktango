@@ -399,4 +399,3 @@ $dateConfig = [ 'enableTime' => false, 'mode' => 'range' ]
     {{-- task modal ready --}}
     <livewire:task.modal />
 </div>
-

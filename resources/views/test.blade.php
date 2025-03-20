@@ -4,4 +4,3 @@
         $user->is_super_admin = true;
     @endphp
 </x-main-layout>
-

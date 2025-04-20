@@ -192,7 +192,7 @@ new class extends Component {
 <x-modal boxClass="max-w-5xl flex flex-col pt-0 px-0 relative" wire:model="openTaskModal" dusk="task-modal">
     {{-- modal's header --}}
     <div class="top-0 z-50 sticky">
-        <div class="flex justify-between p-4 pb-2 bg-base-100">
+        <div class="flex justify-between p-4 pb-2 bg-base-100 pr-8">
                 @include('livewire.task.partials.breadcrumbs')
                 <div>
                 @isset($task)
@@ -208,14 +208,13 @@ new class extends Component {
                         <x-menu-item title="Delete" icon="o-trash" @click="$wire.dispatch('open-task-delete-modal',{ task_id: {{$task->id}} });" class="text-error"/>
                     </x-dropdown>
                 @endisset
-                    <x-button icon="o-x-mark" class="btn-ghost btn-circle" @click="$wire.closeModal" dusk="close" />
                 </div>
         </div>
         <div class="divider divider-primary my-0 h-fit"></div>
     </div>
 
     {{-- modal's body --}}
-    <div class="flex flex-col md:grid grid-rows-2 grid-cols-3 py-2 px-4 gap-2">
+    <div class="flex flex-col md:grid grid-rows-2 grid-cols-3 py-2 px-4 gap-2 overflow-y-scroll">
         {{-- task name, desc and labels --}}
         <div class="col-span-full row-span-1 md:col-span-2 md:row-span-2 flex flex-col gap-2">
             <div class="flex items-center gap-4 pt-2">

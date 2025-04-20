@@ -53,9 +53,8 @@ class CustomMain extends Component
                                 }
                             }"
                             id="main-sidebar"
-
                             @menu-sub-clicked="if(collapsed) { toggle() }"
-                            @class(["drawer-side z-[70] lg:z-auto", "top-0" => $withNav])
+                            @class(["drawer-side z-50 lg:z-auto", "top-0" => $withNav])
                         >
                             <label for="{{ $sidebar?->attributes['drawer'] }}" aria-label="close sidebar" class="drawer-overlay"></label>
 
